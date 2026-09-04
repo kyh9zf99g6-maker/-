@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>С днём рождения, мама Елена!</title>
+  <title>С днём рождения, мама!</title>
   <style>
-    /* Общие сбросы и шрифты */
     * {
       margin: 0;
       padding: 0;
@@ -19,7 +18,7 @@
       justify-content: center;
       align-items: center;
       padding: 2rem 1rem;
-      background: #f5ede4;  /* запасной цвет */
+      background: #f5ede4;
       background: radial-gradient(circle at 20% 30%, #f5ede4 0%, #e8d5c0 60%, #cfb79b 100%);
       background-attachment: fixed;
     }
@@ -38,7 +37,6 @@
       border: 1px solid rgba(220, 190, 165, 0.3);
     }
 
-    /* Заголовок */
     .hero {
       text-align: center;
       margin-bottom: 2.5rem;
@@ -74,7 +72,6 @@
       letter-spacing: 0.3px;
     }
 
-    /* Сетка поляроидов */
     .polaroid-grid {
       display: flex;
       flex-wrap: wrap;
@@ -90,17 +87,13 @@
       box-shadow: 0 15px 30px -10px rgba(80, 55, 35, 0.25),
                   0 0 0 1px rgba(255, 235, 215, 0.5);
       border-radius: 12px 12px 18px 18px;
-      transform: rotate(var(--rot, -1deg));
+      transform: rotate(-1.5deg);
       transition: transform 0.25s ease, box-shadow 0.3s;
-      width: 200px;
+      width: 280px;
       background: #faf3ea;
       backdrop-filter: blur(2px);
       border: 1px solid rgba(235, 215, 195, 0.4);
     }
-
-    .polaroid:nth-child(1) { --rot: -2.5deg; }
-    .polaroid:nth-child(2) { --rot: 3deg; }
-    .polaroid:nth-child(3) { --rot: -1.8deg; }
 
     .polaroid:hover {
       transform: scale(1.02) rotate(0deg);
@@ -113,44 +106,10 @@
       aspect-ratio: 1 / 1;
       background: #dacfc2;
       border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      color: #4f3a2b;
-      background: #d6c6b6;
-      background-image: repeating-linear-gradient(45deg, #d6c6b6 0px, #d6c6b6 8px, #cbbaa8 8px, #cbbaa8 16px);
-      background-blend-mode: overlay;
       overflow: hidden;
-      position: relative;
       border: 1px solid #dacabc;
     }
 
-    /* Имитация фото с подписью (для примера) */
-    .polaroid-img .photo-fallback {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      background: rgba(235, 220, 208, 0.3);
-      backdrop-filter: blur(2px);
-      color: #4f3524;
-      font-weight: 300;
-      text-shadow: 0 1px 4px rgba(255, 240, 220, 0.6);
-      padding: 0.5rem;
-      text-align: center;
-      line-height: 1.4;
-    }
-
-    .polaroid-img .photo-fallback i {
-      font-size: 2.8rem;
-      margin-bottom: 0.2rem;
-      opacity: 0.7;
-    }
-
-    /* Для реальных картинок раскомментировать и заменить фото */
     .polaroid-img img {
       width: 100%;
       height: 100%;
@@ -171,7 +130,6 @@
       font-style: italic;
     }
 
-    /* Письмо */
     .letter {
       background: rgba(250, 240, 228, 0.5);
       backdrop-filter: blur(4px);
@@ -211,7 +169,6 @@
       padding-top: 0.8rem;
     }
 
-    /* Низ */
     .footer-note {
       margin-top: 2rem;
       text-align: center;
@@ -230,7 +187,6 @@
       backdrop-filter: blur(4px);
     }
 
-    /* Адаптив */
     @media (max-width: 700px) {
       .card {
         padding: 1.8rem 1.2rem 2rem;
@@ -240,7 +196,7 @@
         font-size: 2.2rem;
       }
       .polaroid {
-        width: 160px;
+        width: 220px;
         padding: 0.7rem 0.7rem 1.4rem;
       }
       .polaroid-grid {
@@ -256,14 +212,13 @@
         font-size: 1.8rem;
       }
       .polaroid {
-        width: 140px;
+        width: 180px;
       }
       .polaroid-grid {
         gap: 0.8rem;
       }
     }
 
-    /* Декоративный акцент */
     .accent-dot {
       display: inline-block;
       width: 8px;
@@ -277,57 +232,24 @@
 </head>
 <body>
   <div class="card">
-    <!-- Заголовок -->
     <div class="hero">
       <h1>
-        🌿 С днём рождения, <span>Елена</span>!
+        🌿 С днём рождения, <span>мама</span>!
       </h1>
       <div class="sub">
-        ♡ мама, дочка, лучший человек ♡
+        ♡ самая лучшая ♡
       </div>
     </div>
 
-    <!-- 3 Поляроида -->
     <div class="polaroid-grid">
-      <!-- Фото 1 -->
       <div class="polaroid">
         <div class="polaroid-img">
-          <!-- Вставьте реальное фото вместо img или оставьте стилизованный placeholder -->
-          <div class="photo-fallback">
-            <span style="font-size: 3rem;">🌸</span>
-            <span style="font-weight: 300; font-size: 0.85rem;">твоя улыбка</span>
-          </div>
-          <!-- Пример с реальным изображением (раскомментируйте и замените ссылки):
-          <img src="https://via.placeholder.com/300x300/DBC8B8/8B6F5A?text=фото+1" alt="Мама Елена">
-          -->
+          <img src="IMG_6431.jpeg" alt="Мама">
         </div>
-        <div class="caption">✨ осень 2022</div>
-      </div>
-
-      <!-- Фото 2 -->
-      <div class="polaroid">
-        <div class="polaroid-img">
-          <div class="photo-fallback">
-            <span style="font-size: 3rem;">🌼</span>
-            <span style="font-weight: 300; font-size: 0.85rem;">тепло рук</span>
-          </div>
-        </div>
-        <div class="caption">🌿 лето в парке</div>
-      </div>
-
-      <!-- Фото 3 -->
-      <div class="polaroid">
-        <div class="polaroid-img">
-          <div class="photo-fallback">
-            <span style="font-size: 3rem;">☕</span>
-            <span style="font-weight: 300; font-size: 0.85rem;">наш уют</span>
-          </div>
-        </div>
-        <div class="caption">🕯️ тёплый вечер</div>
+        <div class="caption">✨ мой самый родной человек</div>
       </div>
     </div>
 
-    <!-- Письмо (то самое, длинное и тёплое) -->
     <div class="letter">
       <p class="greeting">Мамуля, с днём рождения!</p>
       <p>Даже если нас разделяют километры, в этот день я чувствую себя ближе к тебе, чем когда-либо. Сегодня я снова и снова прокручиваю в голове все наши разговоры, наши воспоминания, и понимаю, как сильно ты для меня значишь.</p>
@@ -338,7 +260,6 @@
       <div class="signature">С днём рождения, моя самая лучшая мама. Я тебя бесконечно люблю и очень скучаю.</div>
     </div>
 
-    <!-- Нижняя декоративная строка -->
     <div class="footer-note">
       <span>🌾  с любовью, твоя дочка  🌾</span>
     </div>
